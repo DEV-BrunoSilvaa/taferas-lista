@@ -5,7 +5,7 @@ const TodoForm = ({ addTodo }) => {
     const [category, setCategory] = useState("");
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
         if(!value || !category) return;
         addTodo(value, category);
         setValue("");
@@ -13,7 +13,7 @@ const TodoForm = ({ addTodo }) => {
     };
 return (
     <div className="todo form">
-    <h2> Criar Tarefas</h2>
+            <h2> Criar Tarefas</h2>
     <form onSubmit={handleSubmit}>
         <input type='text' placeholder='Digite o Titulo'
         value={value}

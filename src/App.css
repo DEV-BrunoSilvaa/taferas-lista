@@ -72,3 +72,31 @@ input, select{
   border-radius: 3px;
   width: 100%;
 }
+.filter{
+  border-bottom:  1px solids #555;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.filter-options{
+  display:flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.filter-options div{
+  flex: 1 1 0;
+}
+.rodape{
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  border-bottom: 1px solid #555;
+  background-color:#12e02394;
+}
+.rodape h2{
+  font-family: "Acme", serif;
+  font-weight: 700;
+  border-bottom: 3px solid #555555b2;
+  font-style: bolder;
+  color:rgb(1, 0, 80);
+}
+

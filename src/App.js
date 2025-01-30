@@ -3,6 +3,8 @@ import Todo from "./Componentes/Todo";
 import TodoForm from './Componentes/TodoForm';
 import Search from './Componentes/Searche';
 import './App.css';
+import Filter from './Componentes/Filter';
+import Rodape from './rodape';
 
 function App() {
 
@@ -29,7 +31,7 @@ function App() {
 
 
   //funcionalidade do botao pesquisar
-  const [search, setSearch] = useState("")
+  const [search, setSaerch] = useState("")
   const addTodo = (text, category) => {
 
     const newTodo = [
@@ -64,22 +66,28 @@ function App() {
   return (
     <div className="app">
       <h1>Lista De Tarefas</h1>
-      <Search search={search}/>
+      <Search search={search} setSaerch={setSaerch}/>
+      <Filter />
+      
     <div className='todo-list'>
       {todos
       .filter((todo) =>
-        (todo.text?.toLowerCase() || "").includes((search?.toLowerCase() || ""))
+        (todo.Text?.toLowerCase() || "").includes((search?.toLowerCase() || ""))
         )
         .map((todo) => (
         <Todo 
         key={todo.id} 
-        todo={todo} 
+                todo={todo} 
         removeTodo={removeTodo} 
         completeTudo={completeTudo}/>
       ))}
     </div>
     <TodoForm addTodo={addTodo} />
+    <div>
+      <Rodape />
     </div>
+    </div>
+    
   );
 }
 
